@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalizer.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section class="modal">
+      <div class="modal-upper">
+        <div class="modal-title">
+          Не нашли, что искали?
+          <span class="modal-title_background">Мы можем помочь!</span>
+        </div>
+        <div class="modal-text">
+          Заполните форму и мы свяжемся с вами уже сегодня
+        </div>
+      </div>
+      <div class="form__container">
+        <form action="POST" class="form">
+          <label for="name" class="form__label">
+            <p class="form__text" id="name-label">*Ваше имя:</p>
+            <input
+              type="text"
+              id="name"
+              class="form__input name-input"
+              placeholder="Введите имя"
+              required
+            />
+          </label>
+          <label for="name" class="form__label">
+            <p class="form__text">*Как с вами связаться?</p>
+            <div class="input-group-flex">
+              <div class="input-group-container">
+                <input
+                  type="checkbox"
+                  class="form-checkbox contact-selector"
+                  id="phone"
+                />
+                <label for="phone" class="form__label_grey">
+                  <p class="form__text_grey" id="phone-label">По телефону</p>
+                </label>
+                <input
+                  type="text"
+                  id="contact-phone"
+                  class="form__input"
+                  placeholder="+7 351 000 00 00"
+                />
+              </div>
+              <div class="input-group-container">
+                <input
+                  type="checkbox"
+                  class="form-checkbox contact-selector"
+                  id="email"
+                /><label for="email" class="form__label_grey">
+                  <p class="form__text_grey " id="email-label">По e-mail</p>
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  class="form__input"
+                  placeholder="Введите e-mail"
+                />
+              </div>
+            </div>
+          </label>
+          <label for="message" class="form__label">
+            <p class="form__text">Чем вам помочь?</p>
+            <input
+              type="text"
+              id="message"
+              class="form__input message-input"
+              placeholder="Напишите вопрос"
+            />
+          </label>
+          <label for="captcha" class="form__label">
+            <p class="form__text">*Введите код с картинки:</p>
+            <div class="captcha-input-container">
+              <input
+                type="text"
+                id="captcha"
+                class="form__input"
+                placeholder="Код"
+              />
+              <div class="captcha-container">
+                <img src="img/captcha.png" alt="captcha" class="captcha-img" />
+                <span class="captcha-update">обновить</span>
+              </div>
+            </div>
+          </label>
+          <input type="checkbox" id="checkbox" class="form-checkbox" />
+          <label for="checkbox" class="form__label permission-container">
+            <p class="form__text form__text_small">
+              Я согласен на обработку
+              <span class="form__span">персональных данных</span>
+            </p>
+          </label>
+          <button class="submit-button">Отправить</button>
+        </form>
+      </div>
+    </section>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
