@@ -1,8 +1,13 @@
+body {
+  background-color: grey;
+}
+
 .modal {
   width: 397px;
   font-family: "Ubuntu", sans-serif;
   padding-bottom: 15px;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
 .attention {
@@ -21,10 +26,9 @@ input:disabled {
   opacity: 0.3;
 }
 
-input:not(:placeholder-shown) {
-  border: 0.5px solid black;
+.form__input::placeholder {
+  font-size: 12px;
 }
-
 .hidden {
   display: none;
 }
@@ -53,11 +57,17 @@ input:not(:placeholder-shown) {
   padding-top: 20px;
 }
 
+.modal-bottom {
+  background-color: white;
+  padding: 15px;
+  width: 367px;
+  border-radius: 0px 0px 25px 25px;
+}
+
 .form__container {
   width: 367px;
   border: 1px solid #707070;
   border-radius: 0px 0px 25px 25px;
-  margin: 15px;
 }
 
 .form {
@@ -79,20 +89,29 @@ input:not(:placeholder-shown) {
   color: #cc0051;
 }
 .form__text_small {
-  font-size: 7px;
+  font-size: 9px;
   color: #707070;
 }
-.form__span {
+.form__href {
   color: #cc0051;
+  text-decoration: none;
 }
 .form__input {
   border: 0.5px solid #939393;
   border-radius: 6px;
   width: 146px;
   height: 26px;
-  font-size: 9px;
+  font-size: 12px;
   padding-left: 4px;
+  outline: none;
 }
+.form__input:focus {
+  border: 0.5px solid black;
+}
+.form__input:not(:placeholder-shown) {
+  border: 0.5px solid black;
+}
+
 .name-input {
   width: 326px;
   height: 26px;
@@ -141,15 +160,19 @@ input:not(:placeholder-shown) {
 }
 
 .submit-button {
-  width: 86px;
-  height: 22px;
+  width: 120px;
+  height: 30px;
   background: #cc0051 0% 0% no-repeat padding-box;
   border-radius: 5px;
   color: #ffffff;
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 20px;
   margin-bottom: 29px;
-  margin-left: 122px;
+  margin-left: 105px;
+  outline: none;
+}
+.submit-button:disabled {
+  opacity: 0.3;
 }
 .invalid-input {
   border: 0.5px solid #cc0051;
@@ -157,21 +180,32 @@ input:not(:placeholder-shown) {
 
 /* =============================================================== */
 
-input[type="checkbox"] {
+input[type="radio"]:checked + label:before {
+  background-color: #cc0051;
+}
+input[type="radio"] {
   display: none;
 }
 
-input[type="checkbox"] + label:before {
+input[type="radio"] + label:before {
   content: "";
   display: inline-block;
-  border: 0.30000001192092896px solid #707070;
+  border: 0.6px solid #707070;
   margin-right: 5px;
+  margin-top: 3px;
   height: 7px;
   width: 7px;
   border-radius: 2px;
   transition: background-color 0.5s ease;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="radio"]:checked + label:before {
   background-color: #cc0051;
+}
+
+@media (max-width: 397px) {
+  .modal {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
