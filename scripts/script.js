@@ -1,6 +1,14 @@
 let submitButton = document.querySelector(".submit-button");
 let permission = document.getElementById("checkbox-permission");
 
+var phoneMask = IMask(document.getElementById("contact-phone"), {
+  mask: "+{7}(000)000-00-00"
+});
+
+var emailMask = IMask(document.getElementById("contact-email"), {
+  mask: "/^S*@?S*$/"
+});
+
 permission.addEventListener("click", e => {
   permission.checked ? (submitButton.disabled = "") : 0;
 });
@@ -11,6 +19,10 @@ submitButton.addEventListener("click", e => {
   requiredInputs.forEach(elem => {
     if (elem.value === "" && !elem.disabled) {
       elem.classList.add("invalid-input");
+      // elem.insertAdjacentHTML(
+      //   "beforebegin",
+      //   `<div class="attention">обязательно к заполнению</div>`
+      // );
     }
   });
   let name = document.getElementById("name-input").value;

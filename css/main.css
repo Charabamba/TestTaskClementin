@@ -120,6 +120,7 @@ input:disabled {
 .message-input {
   width: 326px;
   height: 49px;
+  padding-top: 7px;
 }
 
 .form-checkbox {
