@@ -27,6 +27,7 @@ input:disabled {
 }
 
 .form__input::placeholder {
+  color: black;
   font-size: 12px;
 }
 .hidden {

@@ -5,10 +5,6 @@ var phoneMask = IMask(document.getElementById("contact-phone"), {
   mask: "+{7}(000)000-00-00"
 });
 
-var emailMask = IMask(document.getElementById("contact-email"), {
-  mask: "/^S*@?S*$/"
-});
-
 permission.addEventListener("click", e => {
   permission.checked ? (submitButton.disabled = "") : 0;
 });
